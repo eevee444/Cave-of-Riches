@@ -1,0 +1,439 @@
+#The Cave of Riches
+#by eevee444
+#Last modified: 2/15/2020
+
+#importing functions
+import time
+import random
+
+sword = 0
+TIME_FOR_SLEEPING = 2
+
+
+# game function
+def game():
+ 
+  print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+  print ("Welcome to the Cave of Riches!")
+  print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+
+  time.sleep(TIME_FOR_SLEEPING)
+
+  print ("You are an adventurer, one of many searching for the fabled Cave of Riches.")
+  print ("After many long years of travel, you finally stand in front of its dark, mysterious entrance.")
+  time.sleep(TIME_FOR_SLEEPING)
+  print ("While you drink in the majestic view of the surrounding mountains before entering, a bird circling high above poops on your head. Not a good start to your adventure.")
+  time.sleep(TIME_FOR_SLEEPING + 1)
+  print ("Taking a deep breath, you grip the hilt of the stone sword you broke while traveling here and enter. ")
+  time.sleep(TIME_FOR_SLEEPING)
+  print ("As you step into the cavern, you are plunged into darkness. Thousands of glowing red eyes follow you. Don't these creatures know it's not polite to stare?")
+  time.sleep(TIME_FOR_SLEEPING)
+  print("Then a wave of red-eyed creatures swarm at you!")
+  print("You prepare to fight, but then they snatch your broken sword and gleefully escape with it. Jerks!")
+  time.sleep(TIME_FOR_SLEEPING + 2)
+  print ("As you storm through the cave, your foot strikes something! Perhaps it could be a useful object, or perhaps it is a trap...")
+  
+  ch1 = str(input("Do you grab the object? [y/n]: "))
+
+  global sword
+
+  #object taken
+  if ch1 in ['y', 'Y', 'Yes', 'YES', 'yes', 'oh yah']:
+      
+      print("You pick it up. What's this...")
+      if random.randint(1, 3) == 1:
+        #it's a free, yes, free sword!
+        print("You grin. Boo-yah! It's a very expensive-looking sword, much finer than the one you brought! Its hilt is encrusted with jewels, the blade gleams in the faint light of the red eyes, and it seems to be extremely durable and sharp.")
+        time.sleep(5)
+        sword = 1
+        
+      else:
+        #it's a live grenade! Hey, at least we didn't stick it down your pants.
+        print("It feels like a cold metal sphere, but it's hard to tell for sure in the darkness. You squint at it in the faint light of the red eyes and then it explodes...")
+        time.sleep(5)
+        complete = 0
+        return complete
+        
+        
+
+  #You didn't take the mystery goody? Why not?
+  else:
+      print("You did not take the object...")
+      sword = 0
+  
+  
+  print ("As you proceed further into the cave, you crash into a wall, and your hip smashes into a strange lump.")
+  time.sleep(TIME_FOR_SLEEPING)
+  print ("You realize it's a doorknob, and fumble in the darkness for it. When you open the door and walk in, there is a bright flash...")
+  time.sleep(TIME_FOR_SLEEPING + 1)
+  print ("When you can see again, the cave is illuminated with light. and a massive statue of a winged lynx looms above you, sculpted from translucent white crystal cut into triangular facets.")
+  ch2 = str(input("Do you approach the lynx, or run?"))
+
+  #Come to papa!
+  if ch2 in ['approach', 'approach the lynx', 'approach it', 'come to papa!']:
+      print("You approach the impressive creature...")
+      time.sleep(TIME_FOR_SLEEPING)
+      print("As you draw closer, it begins to snarl in warning.")
+      time.sleep(TIME_FOR_SLEEPING)
+      ch3 = str(input("Do you try to fight it, or talk to it?"))
+      
+      #Chat with papa!
+      if ch3 in ['talk', 'Talk', 'talk to it', 'Talk to it', 'speak', 'Speak', 'speak to it', 'Speak to it', 'Chat with papa!']:
+        print("You step closer to it, and you tentatively speak up.")
+        time.sleep(TIME_FOR_SLEEPING)
+        print("'Um, hello?'")
+        time.sleep(TIME_FOR_SLEEPING)
+        print("It snarls at you, lashing its tail which throws little bits of pink and blue light across the room.")
+        time.sleep(1)
+        print("More forcefully, you repeat yourself. 'HELLO?'")
+        time.sleep(1)
+        print("The statue looks at you with a strange expression. You're not a lynx psychologist, but is that surprise on its crystal face?")
+        print("It frowns. 'Well, this strategy is new, but I know you still want to kill us for the treasure like the rest of them.'")
+        print("The lynx narrows its eyes.")
+        print("Its voice is deep, and rumbles throughout the entire cavern.")
+        time.sleep(TIME_FOR_SLEEPING + 1)
+        print()
+        print("'Which means I have to kill you.'")
+        print()
+        time.sleep(TIME_FOR_SLEEPING)
+        print("You desperately rack your brain for a way to convince the lynx that you don't want to kill anyone.")
+        time.sleep(TIME_FOR_SLEEPING)
+        print(" But who knows how it could use information against you... ")
+        time.sleep(1)
+        print("Maybe if you explain what you came for, it will spare you...")
+        ch4 = input("Do you tell the lynx the truth, or think of a lie to tell it?[truth/lie]")
+
+        #Honesty is the best policy.... OR IS IT? Yes, it is.      
+        if ch4 in ['truth']:
+              print("You courageously call out to the lynx and tell it your true motives.")
+              print("'I don't want to kill anybody! I just want to get the treasure and get out!'")
+              
+              print("The lynx frowns. 'Well, little adventurer, I am rather impressed  that you told me the truth. Most would've lied about it, thinking that I could not tell.'")
+              time.sleep(TIME_FOR_SLEEPING + 3)
+              print("")
+              print("'After all, the truth has a thousand voices...'")
+              print("")
+              time.sleep(TIME_FOR_SLEEPING + 3)
+              print("The lynx nods. 'Maybe I can let you go alive.'")
+              print("You grin. Boo-yah! The lynx statue isn't going to kill you after all!")
+              time.sleep(TIME_FOR_SLEEPING)
+              print("It flicks its crystalline tail. 'Follow me. The treasure is this way.'")
+              time.sleep(TIME_FOR_SLEEPING)
+              print("It leads you to a small trapdoor concealed in the shadows. The statue must've been guarding it.")
+              time.sleep(.5)
+              print("It nods. 'There it is. Enter if you dare.'")
+              print("Gratefully, you thank your new friend for everything as it helps you pry the door open. The statue nods. 'It's the least I could do. It's been so long since I've had a friend.' It has a wistful look on its face.")
+              time.sleep(TIME_FOR_SLEEPING + 2)
+              print("As you descend, the lynx calls, 'Wait!' You pause on the gloomy ladder, staring up.")
+              time.sleep(TIME_FOR_SLEEPING)
+              print("Your friend whispers what could be its final words to you.")
+              time.sleep(TIME_FOR_SLEEPING)
+              print("'Good luck.'")
+              time.sleep(TIME_FOR_SLEEPING + 1)
+              print("'Remember what I said..'")
+              print("")
+              time.sleep(TIME_FOR_SLEEPING + 3)
+              print("'The truth has a thousand voices...'")
+              print("")
+              time.sleep(TIME_FOR_SLEEPING + 3)
+              print("Inexplicably, you have been transported to the bottom of the ladder without realizing it. Does your friend have anything to do with this?")
+       
+              #The story continues... After all, you're not rich yet.
+              next()
+        #Screw honesty
+        else:
+          print("There is absolutely no way you can tell the lynx what's really going on. You can't trust anything in this cave. Who knows how it could use the information against you! ")
+          time.sleep(TIME_FOR_SLEEPING + 3)
+          print("Besides, it wouldn't know. Right?")
+          time.sleep(TIME_FOR_SLEEPING + 1)
+          print("The statue glares. 'Well?' Its voice startles you. Uh-oh. Think quick!")
+          time.sleep(TIME_FOR_SLEEPING + 1)
+          print("You stutter, 'O-of course I w-won't take any treasure! Ha-ha! Th-that's ridic-culous!")
+          time.sleep(TIME_FOR_SLEEPING + 1)
+          print("The crystal cat sighs. 'Liar. You shouldn't have bothered. The only reason I was created was to separate truth and lies.'")
+          time.sleep(TIME_FOR_SLEEPING + 1)
+          print("'Fear can bring out the worst in mortals...")
+          print()
+          time.sleep(TIME_FOR_SLEEPING + 3)
+          print("'Or the best...'")
+          print()
+          time.sleep(TIME_FOR_SLEEPING + 3)
+          print("It stares at you with sadness in your eyes. 'Goodbye, little mortal. I'll make it quick.'")
+          print("The lynx raises its paw and brings it down swiftly. You never feel the pain.")
+          time.sleep(TIME_FOR_SLEEPING + 1)
+          
+          complete = 0
+          return complete
+                
+                     
+              
+      #Fyte!
+      elif ch3 in ['fight', 'fight it', 'Fight', 'Fight it', 'battle', 'Battle', 'fyte!']:
+
+          #iHAS KEWL SWORD
+          if sword == 1:
+              print ("You have your new sword to fight with! Good thing you picked it up!")
+              print ("You quickly jab the lynx in its nose.")
+              print ("Your sword strikes it, and some of the crystal chips off. The lynx's eyes seem to widen in surprise.")
+              time.sleep(TIME_FOR_SLEEPING + 2)
+              print("You gain an advantage!")
+              time.sleep(TIME_FOR_SLEEPING)
+              print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+              print ("                  Fighting...                   ")
+              print ("YOU MUST DEAL AT LEAST 5 DAMAGE TO DEFEAT THE LYNX    ")
+              print (" IF THE LYNX DEALS MORE THAN YOU, YOU WILL DIE")
+              print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+              time.sleep(TIME_FOR_SLEEPING)
+              fdmg1 = int(random.randint(3, 10))
+              edmg1 = int(random.randint(4, 8))
+              print ("you deal", fdmg1, "damage.")
+              print ("the statue deals", edmg1, "damage.")
+              time.sleep(TIME_FOR_SLEEPING)
+
+              if edmg1 > fdmg1:
+                  print ("The lynx has dealt more damage than you! It sinks its fangs into your shoulder, and its claws rake your throat.")
+                  complete = 0
+                  return complete
+
+              elif fdmg1 < 5:
+                  print ("You didn't do enough damage to defeat the lynx, but you manage to escape.")
+                  complete = 1
+                  return complete
+
+              else:
+                  print ("You defeat the statue! You slash it in the muzzle, and it shatters into a million shards of crystal, throwing bits of blue and pink light across the cave.")
+                  time.sleep(TIME_FOR_SLEEPING + 2)
+                  print("As you check yourself for cuts from the crystal shards, you spot a trapdoor that you didn't see before. The lynx must've been guarding it.")
+                  time.sleep(TIME_FOR_SLEEPING + 2)
+                  ch5 = input("Do you enter the trapdoor? [y/n]")
+                  if ch5 in ['y', 'Y', 'yes', 'Yes', 'YES', 'oh yah',]:
+                    print("You hurry over to the trapdoor. Now that you have no dangers to worry about, you'd better get the treasure and get out while you still can...")
+                    time.sleep(TIME_FOR_SLEEPING + 3)
+                    print("Heaving it open, you peer inside. There is a ladder leading to a dark room. You grin. Boo-yah! This must be where the treasure is hidden!")
+                    time.sleep(TIME_FOR_SLEEPING)
+                    print("Scrambling down the ladder is easy. The rungs seem to fit your hands perfectly. Only when you are at the bottom of the ladder do you realize that whatever lies ahead could be the end...")
+                    time.sleep(TIME_FOR_SLEEPING + 2)
+                    #The story continues... Hey, you're not rich, yet.
+                    next()
+                  
+                  else:
+                    print("You turn away from the trapdoor. Forget about the treasure, you're alive and that's enough of a miracle already!")
+                    time.sleep(TIME_FOR_SLEEPING + 1)
+                    print("As you walk back to the door and yank it open, the bright light illuminating the chamber suddenly goes out, and the red-eyed creatures that lurked here have gathered around you, fangs bared.")
+                    time.sleep(TIME_FOR_SLEEPING + 1)
+                    print("No one was around to hear your screams...")
+                    complete = 0
+                    return complete
+
+
+          #iHAS NO KEWL SWORD
+          else:
+              print ("You only have your hands and feet to fight with! You broke your stone sword on the way here!")
+              time.sleep(TIME_FOR_SLEEPING)
+              print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+              print ("                  Fighting...                   ")
+              print ("YOU MUST DEAL AT LEAST 5 DAMAGE TO DEFEAT THE LYNX    ")
+              print ("       IF THE LYNX DEALS MORE, YOU WILL DIE")
+              print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+              time.sleep(2)
+              fdmg1 = int(random.randint(2, 6))
+              edmg1 = int(random.randint(4, 8))
+              print ("you deal", fdmg1, "damage.")
+              print ("the statue deals", edmg1, "damage.")
+              time.sleep(2)
+
+              if edmg1 > fdmg1:
+                  print ("The lynx has dealt more damage than you! It sinks its fangs into your shoulder, and its claws rake your throat.")
+                  complete = 0
+                  return complete
+
+              elif fdmg1 < 5:
+                  print ("You didn't do enough damage to defeat the statue, but you manage to dodge the killing blow and run for the door!")
+                  complete = 2
+                  return complete
+              
+              elif fdmg1 == edmg1:
+                  print ("You didn't do enough damage to defeat the statue, but you manage to dodge the killing blow and run for the door!")
+                  complete = 2
+                  return complete
+
+              else:
+                  print ("You defeated the crystal lynx! You kick its muzzle, and it jerks back and turns still.")
+                  time.sleep(TIME_FOR_SLEEPING + 1)
+                  print("As you watch the creature retreat further into the cave, you spot a trapdoor that you didn't see before. The lynx must've been guarding it.")
+                  ch5 = input("Do you enter the trapdoor? [y/n]")
+                  if ch5 in ['y', 'Y', 'yes', 'Yes', 'YES', 'oh yah',]:
+                    print("You hurry over to the trapdoor. Now, you'd better get the treasure and get out while you still can...")
+                    time.sleep(TIME_FOR_SLEEPING + 2)
+                    print("Heaving it open, you peer inside. There is a ladder leading to a dark room. You grin. Boo-yah! This must be where the treasure is hidden!")
+                    time.sleep(TIME_FOR_SLEEPING)
+                    print("Scrambling down the ladder is easy. The rungs seem to fit your hands perfectly. Only when you are at the bottom of the ladder do you realize that whatever lies ahead could be the end...")
+                    time.sleep(TIME_FOR_SLEEPING)
+                    # the story continues...
+                    next()
+                  else:
+                    print("You turn away from the trapdoor...")
+                    time.sleep(TIME_FOR_SLEEPING + 1)
+                    print("As you walk back to the door and yank it open, the bright light illuminating the chamber suddenly goes out, and the red-eyed creatures that lurked here have gathered around you...")
+                    complete = 0
+                    return complete
+  
+  #Get away from papa!
+  else:
+          print ("You turn away from the majestic statue and sprint, heading for the door you came through...")
+          time.sleep(TIME_FOR_SLEEPING)
+          print ("But a crystal claw hooks your throat as your fingers brush the doorknob...")
+          time.sleep(TIME_FOR_SLEEPING)
+          complete = 0
+          return complete
+
+#The story continues... Don't die!
+def next():
+  print("You stand at in a damp, dim room with a single exit. The ladder behind you has suddenly vanished. There's no turning back.")
+  print("As you walk through the exit and step into a hallway, your foot strikes something.")
+  time.sleep(1)
+  print("A crystal statue of a human, made of the same material as the statue from earlier, lies across the hallway.")
+  print("Its face is twisted into a silent shriek, and you can see more statues lining the walls of the hallway, all screaming and poised to run...")
+  time.sleep(TIME_FOR_SLEEPING + 1)
+  print("")
+  print("That is creepy.")
+  print("")
+  time.sleep(1)
+  print("After continuing down the twisting tunnel and tripping over more statues, you finally reach a dead end with nothing but a funny lump on the wall.")
+  print("No matter how hard you search, you find no way to continue on. All your toil has been for nothing.")
+  time.sleep(TIME_FOR_SLEEPING + 2)
+  print("What's the point of such a stupid place, with nothing but danger and a dead end?")
+  time.sleep(1)
+  print("")
+  print("WHAT KIND OF A SICKO WOULD CREATE LEGENDS ABOUT THIS STUPID, IDIOTIC PLACE?")
+  time.sleep(TIME_FOR_SLEEPING + 3)
+  print("")
+  print("Oh wait, the lump is a doorknob.")
+  print("")
+  time.sleep(TIME_FOR_SLEEPING + 1)
+  print("Okay, moving on.")
+  time.sleep(1)
+  print("")
+  print("You pull the door open, revealing a small and extremely dark cavern. The wall is covered in spider silk.")
+  print("As you search for a way out, a bristly tarantula with eight acid-green eyes lunges for you!")
+  print ("That wasn't spider silk you saw, it was tarantula silk!")
+  time.sleep(TIME_FOR_SLEEPING)
+
+  print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+  print ("                  Fighting...                   ")
+  print ("YOU MUST DEAL AT LEAST 7 DAMAGE TO DEFEAT THE TARANTULA    ")
+  print (" IF THE TARANTULA DEALS MORE THAN YOU, YOU WILL DIE")
+  print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+  time.sleep(TIME_FOR_SLEEPING)
+  if sword == 1:
+    fdmg1 = int(random.randint(3, 10))
+    edmg1 = int(random.randint(4, 8))
+  else:
+    fdmg1 = int(random.randint(2, 8))
+    edmg1 = int(random.randint(4, 8))
+  print ("you deal", fdmg1, "damage.")
+  print ("the tarantula deals", edmg1, "damage.")
+  time.sleep(TIME_FOR_SLEEPING)
+
+#Welp tarantula did more damage
+  if edmg1 > fdmg1:
+    print ("The tarantula has dealt more damage than you! It smashes you into the wall and sinks its poisonous fangs into your leg.")
+    time.sleep(1)
+    print("As the tarantula wraps layers of webby silk around you, your limbs start to feel numb, except for a feeling that your arms and legs are lighter.")
+    time.sleep(1)
+    print("The last thing you register is your arm turning to gleaming translucent white crystal...")
+    time.sleep(TIME_FOR_SLEEPING + 3)
+    complete = 0
+    return complete
+
+#Welp you didn't do enough damage
+  elif fdmg1 < 7:
+          print ("You didn't do enough damage to defeat the tarantula, but you manage to knock it back and sprint out of the small chamber.")
+          time.sleep(TIME_FOR_SLEEPING)
+          print("The ladder has mysteriously reappeared, and you climb it gratefully, the tarantula at your heels. As you frantically escape from the cave, you look back and the red-eyed creatures are pinning down the tarantula.")
+          time.sleep(TIME_FOR_SLEEPING+2)
+          complete = 1
+          return complete
+#Wow you won
+  else:
+          if sword == 1:
+            print("You manage to roll out of the way in the nick of time and slash the tarantula! It dissolves into dark-gray ash.")
+            time.sleep(TIME_FOR_SLEEPING)
+          else: 
+            print("You manage to roll out of the way in the nick of time and kick the tarantula!")
+            print("Your foot connects with one of its eyes, and it dissolves into dark-gray ash.")
+            time.sleep(TIME_FOR_SLEEPING)
+  
+  print("The smell from the ash is awful! You scramble to get out of the stuffy cavern.")
+  ch6 = input("Outside of the cavern, the hallway splits into three. How ridiculously cliche. Anyway, which one do you take?(1, 2, or 3)")
+  
+  #We Are Hallway 1 - by Crazy Town 
+  if ch6 in ['1']:
+    print("You take the first hallway...")
+    print("The first thing you notice about this path is that the crystal statues have disappeared. Maybe because the tarantula never came down this path?")
+    print("Unlike the hall before, this one is straight, stretching in one direction for as far as you can see, and brighter.")
+    time.sleep(TIME_FOR_SLEEPING+3)
+    print("")
+    print("As you walk, you unwittlingly step on a wire...")
+    time.sleep(TIME_FOR_SLEEPING+3)
+    print("")
+    print("And you trigger a landmine and blow yourself up. How sad.")
+    complete = 0
+    return complete
+  
+  #Hallway 2, it's up to you. Hey, I'm a poet! Didn't know it.
+  elif ch6 in ['2']:
+    print("You take the second hallway...")
+    print("This hallway is like the one before. Twisty and crystal statues along the wall, but there are some sculptures of mythical animals hanging from the ceiling by thin, delicate silver wires. It's also much brighter, the light reflecting off the statues' many facets and giving them all a warm glow.")
+    time.sleep(TIME_FOR_SLEEPING+5)
+    print("It almost looks brand-new. Looks like no one has been here in a while.")
+    time.sleep(TIME_FOR_SLEEPING)
+    print("The tunnel begins sloping downward and walls become rough brownish-gray stone, with a few chunks of granite. It's become very dim, but there is a faint light up ahead.")
+    time.sleep(TIME_FOR_SLEEPING + 2)
+    print("Eventually, you walk into a huge cavern with an underground lake taking up most of it. Glowing orbs inexplicably hanging from the ceiling give the cavern a warm, golden glow.")
+    time.sleep(TIME_FOR_SLEEPING + 2)
+    print()
+    print("You stand there on the stone shore, gaping at the quiet scene before you.")
+    time.sleep(TIME_FOR_SLEEPING)
+    print()
+    print("Then, a tidal wave rises up, drenching you. A charcoal-gray kraken is now peering at you from the center of the lake. It's much bigger than the crystal lynx, or any of the statues you saw.")
+    time.sleep(TIME_FOR_SLEEPING)
+    print("You tense up, ready for a fight, until it begins to speak.")
+
+  #Hallway 3's the charm. 
+  else:
+    print("You take the third hallway...")
+
+ 
+
+# game loop
+alive = True
+while alive:
+  
+  #You win!
+  complete = game()
+  if complete == 1:
+      alive = input('You found the treasure and escaped the cave alive! You grin. Boo-yah! Would you like to play again? [y/n]: ')
+      if alive in ['y', 'Y', 'YES', 'yes', 'Yes', 'oh yah']:
+          alive
+      else:
+        break
+  
+  #At least you're not dead.
+  elif complete == 2:
+      alive = input('You did not find the treasure you were searching for, but you escaped the cave alive. Would you like to play again? [y/n]')
+      if alive in['y', 'Y', 'YES', 'yes', 'Yes', 'oh yah']:
+          alive
+      else:
+        break
+
+  #You died. Sucks to be you.
+  else:
+      alive = input('You have died! Would you like to play again? [y/n]: ')
+      if alive in ['y', 'Y', 'YES', 'yes', 'Yes',]:
+          alive
+          
+
+      else:
+          break
+          
